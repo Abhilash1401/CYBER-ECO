@@ -1,0 +1,7 @@
+from django.apps import AppConfig
+
+
+class BountiesConfig(AppConfig):
+    default_auto_field = "django.db.models.BigAutoField"
+    name = "apps.bounties"
+    verbose_name = "Bounties"

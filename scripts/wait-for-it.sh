@@ -1,0 +1,1 @@
+#!/bin/sh\n# wait-for-it.sh - Wait for a service to be ready\nset -e\n\nhost="$1"\nport="$2"\nshift 2\ncmd="$@"\n\nuntil nc -z "$host" "$port" 2>/dev/null; do\n  echo "Waiting for $host:$port..."\n  sleep 1\ndone\n\necho "$host:$port is ready"\nexec $cmd\n
