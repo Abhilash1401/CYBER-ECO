@@ -1,3 +1,4 @@
+import secrets
 from datetime import timedelta
 
 import pytest
@@ -6,6 +7,7 @@ from apps.companies.models import (
     Organization,
     OrganizationStatus,
 )
+from apps.companies.services import invite_member
 from apps.programs.models import Program, ProgramStatus, ProgramVisibility
 from django.utils import timezone
 from rest_framework import status
@@ -27,11 +29,6 @@ def org(db):
     return Organization.objects.create(
         name="Test Org", status=OrganizationStatus.VERIFIED
     )
-
-
-import secrets
-
-from apps.companies.services import invite_member
 
 
 @pytest.fixture
