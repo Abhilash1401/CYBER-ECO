@@ -14,5 +14,5 @@ redis==5.0.8
 psycopg[binary]>=3.2.3
 django-cors-headers==4.4.0
 cryptography>=43.0.0
-dnspython==2.7.0
+dnspython==2.9.0
 nh3==0.3.7
